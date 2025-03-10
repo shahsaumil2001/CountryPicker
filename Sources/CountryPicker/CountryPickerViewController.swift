@@ -167,10 +167,19 @@ public final class CountryPickerViewController: UIViewController {
 
     override public func viewDidLoad() {
         super.viewDidLoad()
-        countries = CountryManager.shared.getCountries().sorted {
+        let allowedCountries = ["SA", "BH", "KW", "OM", "QA", "AE"]
+        // Get all countries and filter only the allowed ones
+        countries = CountryManager.shared.getCountries().filter { allowedCountries.contains($0.isoCode) }
+        
+        // Sort the filtered list alphabetically
+        countries = countries.sorted {
             $0.localizedName.localizedCaseInsensitiveCompare($1.localizedName) == CountryManager.shared.config.countriesSortingComparisonResult
         }
+        
+        // Assign filtered countries
         filteredCountries = countries
+        
+        // Reload table view to apply changes
         tableView.reloadData()
     }
 
