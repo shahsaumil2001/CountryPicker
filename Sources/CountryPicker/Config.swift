@@ -190,7 +190,7 @@ public struct Config: Configuration {
         searchBarLeftImage: UIImage? = nil,
         searchIconHeight: CGFloat = 16.0,
         searchBarClearImage: UIImage? = nil,
-        searchBarCornerRadius: CGFloat = 4,
+        searchBarCornerRadius: CGFloat = 8,
         searchBarBorderColor: UIColor = ColorCompatibility.systemGray5,
         searchBarBorderWidth: CGFloat = .zero,
         separatorColor: UIColor = ColorCompatibility.systemGray5,

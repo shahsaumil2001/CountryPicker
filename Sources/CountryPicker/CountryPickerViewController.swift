@@ -60,6 +60,7 @@ public final class CountryPickerViewController: UIViewController {
         textField.layer.cornerRadius = CountryManager.shared.config.searchBarCornerRadius
         textField.backgroundColor = CountryManager.shared.config.searchBarBackgroundColor
         textField.delegate = self
+        textField.tintColor = .black
         textField.font = CountryManager.shared.config.searchBarFont
         textField.layer.borderColor = CountryManager.shared.config.searchBarBorderColor.cgColor
         textField.layer.borderWidth = CountryManager.shared.config.searchBarBorderWidth
